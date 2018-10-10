@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0f73fee-d1f1-4cba-8e89-f7a4ee41b48e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/controllers/dashboard_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/dashboard_controller.rb" afterDir="false" />
-    </list>
+    <list default="true" id="e0f73fee-d1f1-4cba-8e89-f7a4ee41b48e" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/public/system/" />
@@ -17,7 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/TaskMaster@Development__TaskMaster.rcov" NAME="Development: TaskMaster Coverage Results" MODIFIED="1539162592353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="TaskMaster" />
+    <SUITE FILE_PATH="coverage/TaskMaster@Development__TaskMaster.rcov" NAME="Development: TaskMaster Coverage Results" MODIFIED="1539164017434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="TaskMaster" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="973875686">
@@ -36,7 +34,7 @@
         <counts>
           <entry key="Gemfile" value="2" />
           <entry key="css" value="1" />
-          <entry key="erb" value="3" />
+          <entry key="erb" value="4" />
           <entry key="js" value="1" />
           <entry key="rb" value="15" />
           <entry key="yml" value="3" />
@@ -46,7 +44,7 @@
         <counts>
           <entry key="CSS" value="1" />
           <entry key="JavaScript" value="1" />
-          <entry key="RHTML" value="3" />
+          <entry key="RHTML" value="4" />
           <entry key="Ruby" value="17" />
           <entry key="YAML" value="3" />
         </counts>
@@ -54,7 +52,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Gemfile" value="50" />
-          <entry key="erb" value="343" />
+          <entry key="erb" value="356" />
           <entry key="js" value="73" />
           <entry key="rb" value="224" />
           <entry key="scss" value="20" />
@@ -64,7 +62,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JavaScript" value="73" />
-          <entry key="RHTML" value="343" />
+          <entry key="RHTML" value="356" />
           <entry key="Ruby" value="274" />
           <entry key="SCSS" value="20" />
           <entry key="YAML" value="23" />
@@ -114,16 +112,25 @@
         <entry file="file://$PROJECT_DIR$/app/controllers/dashboard_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/secured_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/controllers/secured_controller.rb">
+        <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
+            <state relative-caret-position="270">
+              <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -150,7 +157,7 @@
         <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -188,6 +195,7 @@
         <option value="$PROJECT_DIR$/app/views/dashboard/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/dashboard_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/secured_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
       </list>
     </option>
   </component>
@@ -255,14 +263,15 @@
               <item name="TaskMaster" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="devise" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TaskMaster" type="b2602c69:ProjectViewProjectNode" />
               <item name="TaskMaster" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+              <item name="devise" type="462c0819:PsiDirectoryNode" />
+              <item name="sessions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TaskMaster" type="b2602c69:ProjectViewProjectNode" />
@@ -426,12 +435,12 @@
       <workItem from="1538983801803" duration="12214000" />
       <workItem from="1539064906267" duration="7478000" />
       <workItem from="1539083347591" duration="864000" />
-      <workItem from="1539149241614" duration="8630000" />
+      <workItem from="1539149241614" duration="9907000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32709000" />
+    <option name="totallyTimeSpent" value="33986000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -575,7 +584,7 @@
     <entry file="file://$PROJECT_DIR$/app/controllers/dashboard_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
@@ -589,14 +598,21 @@
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/secured_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
         </state>
       </provider>
     </entry>
