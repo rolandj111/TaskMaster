@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :tasks
   resources :projects
   get "dashboard/index"
   root "dashboard#index"
