@@ -15,7 +15,8 @@ module TaskMaster
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
-    #
+
+    #instruct rails to generate js instead of coffee scripts
     config.generators.javascript_engine :js
   end
 end
