@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Category.create!({id:1, name:'Feature'})
+Category.create!({id:2, name:'Bug'})
+
+Status.create!({id:1, name:'Not started'})
+Status.create!({id:2, name:'In progress'})
+Status.create!({id:3, name:'Done'})
+
+Priority.create!({id:1, level:'Low'})
+Priority.create!({id:2, level:'Medium'})
+Priority.create!({id:3, level:'High'})
+Priority.create!({id:4, level:'Top'})
