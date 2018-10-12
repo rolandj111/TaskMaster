@@ -12,12 +12,12 @@
 
 <p>
   <strong>Created at:</strong>
-  <%= @project.created_at.strftime("%c") %>
+  <%= @project.created_at %>
 </p>
 
 <p>
   <strong>Updated at:</strong>
-  <%= @project.updated_at.strftime("%c") %>
+  <%= @project.updated_at %>
 </p>
 
 <%= link_to 'Edit', edit_project_path(@project) %> |

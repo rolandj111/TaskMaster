@@ -27,7 +27,7 @@
 
 <p>
   <strong>Due date:</strong>
-  <%= @task.due_date.strftime("%c") %>
+  <%= @task.due_date %>
 </p>
 
 <p>
@@ -42,12 +42,12 @@
 
 <p>
   <strong>Created at:</strong>
-  <%= @task.created_at.strftime("%c") %>
+  <%= @task.created_at %>
 </p>
 
 <p>
   <strong>Updated at:</strong>
-  <%= @task.updated_at.strftime("%c") %>
+  <%= @task.updated_at %>
 </p>
 
 <%= link_to 'Edit', edit_task_path(@task) %> |
