@@ -12,13 +12,18 @@
 
 <p>
   <strong>Created at:</strong>
-  <%= @project.created_at %>
+  <%= @project.created_at.strftime("%c") %>
 </p>
 
 <p>
   <strong>Updated at:</strong>
-  <%= @project.updated_at %>
+  <%= @project.updated_at.strftime("%c") %>
 </p>
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
+
+<p>
+  <%= link_to 'Add Task', new_task_path %>
+</p>
+

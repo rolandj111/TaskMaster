@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @task.project_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @task.user_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @task.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @task.description %>
+</p>
+
+<p>
+  <strong>Due date:</strong>
+  <%= @task.due_date.strftime("%c")  %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @task.created_at.strftime("%c") %>
+</p>
+
+<p>
+  <strong>Updated at:</strong>
+  <%= @task.updated_at.strftime("%c") %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @task.category_id %>
+</p>
+
+<p>
+  <strong>Priority:</strong>
+  <%= @task.priority_id %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @task.status_id %>
+</p>
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>
