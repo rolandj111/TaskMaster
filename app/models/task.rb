@@ -6,4 +6,8 @@ class Task < ApplicationRecord
   has_one :category
   has_one :priority
   has_one :status
+
+  validates :category, presence: true
+  validates :priority, presence: true
+  validates :status, presence: true
 end

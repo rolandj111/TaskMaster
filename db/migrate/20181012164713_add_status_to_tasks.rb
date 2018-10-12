@@ -1,5 +1,5 @@
 class AddStatusToTasks < ActiveRecord::Migration[5.2]
   def change
-    add_reference :tasks, :status, foreign_key: true
+    add_reference :tasks, :status, foreign_key: true, index: true, null: false
   end
 end
