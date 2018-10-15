@@ -66,9 +66,9 @@ ActiveRecord::Schema.define(version: 2018_10_12_164713) do
     t.datetime "due_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "category_id"
-    t.bigint "priority_id"
-    t.bigint "status_id"
+    t.bigint "category_id", null: false
+    t.bigint "priority_id", null: false
+    t.bigint "status_id", null: false
     t.index ["category_id"], name: "index_tasks_on_category_id"
     t.index ["priority_id"], name: "index_tasks_on_priority_id"
     t.index ["status_id"], name: "index_tasks_on_status_id"

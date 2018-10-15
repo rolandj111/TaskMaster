@@ -6,18 +6,25 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Project.create!({id:1, name: 'Test project', description: 'description 1'})
-Task.create!({id: 1, project_id: 1, user_id: 2, name: 'task 1', description: 'description task 1', category_id: 1, due_date: Time.now, priority_id: 1, status_id: 1,})
-
+Category.delete_all
 Category.create!({id:1, name:'Feature'})
 Category.create!({id:2, name:'Bug'})
 
+Status.delete_all
 Status.create!({id:1, name:'Not started'})
 Status.create!({id:2, name:'In progress'})
 Status.create!({id:3, name:'Done'})
 
+Priority.delete_all
 Priority.create!({id:1, level:'Low'})
 Priority.create!({id:2, level:'Medium'})
 Priority.create!({id:3, level:'High'})
 Priority.create!({id:4, level:'Top'})
+
+Task.delete_all
+Project.delete_all
+Project.create!({id:1, name: 'Test project', description: 'description 1'})
+Task.create!({id: 1, project_id: 1, user_id: 2, name: 'task 1', description: 'description task 1', category_id: 1, due_date: Time.now, priority_id: 1, status_id: 1,})
+
+
 
