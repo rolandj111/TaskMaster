@@ -5,10 +5,7 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Created at</th>
-      <th>Updated at</th>
+      <th></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,18 +13,13 @@
   <tbody>
     <% @projects.each do |project| %>
       <tr>
-        <td><%= project.name %></td>
-        <td><%= project.description %></td>
-        <td><%= project.created_at %></td>
-        <td><%= project.updated_at %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><p><b><%= link_to project.name, edit_project_path(project) %></b><br/><i><%= project.description %></i><br/>Date Posted: <%= project.created_at.strftime("%c") %>
+          <br/><%= link_to 'Edit', edit_project_path(project) %> | <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
 
-<%= link_to 'New Project', new_project_path %>
+

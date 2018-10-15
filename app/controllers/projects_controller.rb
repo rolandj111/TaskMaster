@@ -28,8 +28,8 @@ class ProjectsController < SecuredController
 
     respond_to do |format|
       if @project.save
-        to_user = User.find_by(:id => 2)
-        UserMailer.with(user: current_user, to_user: to_user, task: @project).notify_user.deliver_now
+        #to_user = User.find_by(:id => 2)
+        #UserMailer.with(user: current_user, to_user: to_user, task: @project).notify_user.deliver_now
 
         format.html { redirect_to @project, notice: 'Project was successfully created.' }
         format.json { render :show, status: :created, location: @project }
@@ -72,6 +72,6 @@ class ProjectsController < SecuredController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:name, :description, :created_at, :updated_at)
+      params.require(:project).permit(:name, :description)
     end
 end
