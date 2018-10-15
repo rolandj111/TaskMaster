@@ -1,4 +1,4 @@
-class ProjectsController < ApplicationController
+class ProjectsController < SecuredController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
 
   # GET /projects
@@ -28,6 +28,7 @@ class ProjectsController < ApplicationController
 
     respond_to do |format|
       if @project.save
+        #UserMailer.with(user: current_user).notify_user.deliver_now
         format.html { redirect_to @project, notice: 'Project was successfully created.' }
         format.json { render :show, status: :created, location: @project }
       else
