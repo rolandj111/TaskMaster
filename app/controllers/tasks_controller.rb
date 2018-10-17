@@ -10,6 +10,7 @@ class TasksController < SecuredController
   # GET /tasks/1
   # GET /tasks/1.json
   def show
+
   end
 
   # GET /tasks/new

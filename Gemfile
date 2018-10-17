@@ -65,7 +65,7 @@ gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 
-#require 'rubygems'
-#gem 'autoprefixer-rails'
-#require 'autoprefixer-rails'
+require 'rubygems'
+gem 'autoprefixer-rails'
+require 'autoprefixer-rails'
 
