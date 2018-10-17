@@ -21,10 +21,10 @@ Priority.create!({id:2, level:'Medium'})
 Priority.create!({id:3, level:'High'})
 Priority.create!({id:4, level:'Top'})
 
-Task.delete_all
-Project.delete_all
-Project.create!({id:1, name: 'Test project', description: 'description 1'})
-Task.create!({id: 1, project_id: 1, user_id: 2, name: 'task 1', description: 'description task 1', category_id: 1, due_date: Time.now, priority_id: 1, status_id: 1,})
+#Task.delete_all
+#Project.delete_all
+#Project.create!({id:1, name: 'Test project', description: 'description 1'})
+#Task.create!({id: 1, project_id: 1, user_id: 2, name: 'task 1', description: 'description task 1', category_id: 1, due_date: Time.now, priority_id: 1, status_id: 1,})
 
 
 
