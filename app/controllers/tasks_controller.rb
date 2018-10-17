@@ -11,6 +11,13 @@ class TasksController < SecuredController
   # GET /tasks/1.json
   def show
 
+    @comments = Comment.where("task_id = '#{@task.id}'")
+    #
+    #
+    # //puts @comments
+
+    puts 'Chancellor is coming to town'
+
   end
 
   # GET /tasks/new
