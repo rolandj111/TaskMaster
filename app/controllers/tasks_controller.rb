@@ -15,6 +15,13 @@ class TasksController < SecuredController
     #   disable fields, use display only
     # end
 
+    @comments = Comment.where("task_id = '#{@task.id}'")
+    #
+    #
+    # //puts @comments
+    puts 'Chancellor is coming to town'
+
+
   end
 
   # GET /tasks/new
@@ -32,7 +39,6 @@ class TasksController < SecuredController
   # POST /tasks.json
   def create
     @task = Task.new(task_params)
-
     respond_to do |format|
       if @task.save
         format.html { redirect_to @task, notice: 'Task was successfully created.' }
