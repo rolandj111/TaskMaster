@@ -10,11 +10,18 @@ class TasksController < SecuredController
   # GET /tasks/1
   # GET /tasks/1.json
   def show
+
+    # unless current_user.is_admin
+    #   disable fields, use display only
+    # end
+
   end
 
   # GET /tasks/new
   def new
     @task = Task.new
+    @task.project_id = params[:project_id]
+    @task.user_id = current_user.id
   end
 
   # GET /tasks/1/edit
