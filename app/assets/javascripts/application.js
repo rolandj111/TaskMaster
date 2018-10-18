@@ -22,6 +22,6 @@
 //= require_tree .
 //= require jquery-ui
 
-$(document).ready(function() {
+$(document).on('turbolinks:load', function() {
     $('.datepicker').datepicker();
-})
+});
