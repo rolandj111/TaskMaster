@@ -11,18 +11,24 @@ class TasksController < SecuredController
   # GET /tasks/1.json
   def show
 
+    # unless current_user.is_admin
+    #   disable fields, use display only
+    # end
+
     @comments = Comment.where("task_id = '#{@task.id}'")
     #
     #
     # //puts @comments
-
     puts 'Chancellor is coming to town'
+
 
   end
 
   # GET /tasks/new
   def new
     @task = Task.new
+    @task.project_id = params[:project_id]
+    @task.user_id = current_user.id
   end
 
   # GET /tasks/1/edit

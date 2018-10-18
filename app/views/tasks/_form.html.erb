@@ -13,12 +13,12 @@
 
   <div class="field">
     <%= form.label :project_id %>
-    <%= form.number_field :project_id %>
+    <%= form.collection_select(:project_id, Project.all, :id, :name, {:prompt => 'Select project'}, :selected => @task.project_id ) %>
   </div>
 
   <div class="field">
     <%= form.label :user_id %>
-    <%= form.number_field :user_id %>
+    <%= form.collection_select(:user_id, User.all, :id, :email, {:prompt => 'Select user'}, :selected => @task.user_id ) %>
   </div>
 
   <div class="field">
@@ -33,32 +33,24 @@
 
   <div class="field">
     <%= form.label :due_date %>
-    <%= form.datetime_select :due_date %>
-  </div>
-
-  <div class="field">
-    <%= form.label :created_at %>
-    <%= form.datetime_select :created_at %>
-  </div>
-
-  <div class="field">
-    <%= form.label :updated_at %>
-    <%= form.datetime_select :updated_at %>
+    <%= form.text_field :due_date, :class => "datepicker" %>
   </div>
 
   <div class="field">
     <%= form.label :category_id %>
-    <%= form.text_field :category_id %>
+    <%= form.collection_select(:category_id, Category.all, :id, :name, {:prompt => 'Select category'}, :selected => @task.category_id ) %>
   </div>
+
+
 
   <div class="field">
     <%= form.label :priority_id %>
-    <%= form.text_field :priority_id %>
+    <%= form.collection_select(:priority_id, Priority.all, :id, :level, {:prompt => 'Select priority'}, :selected => @task.priority_id ) %>
   </div>
 
   <div class="field">
     <%= form.label :status_id %>
-    <%= form.text_field :status_id %>
+    <%= form.collection_select(:status_id, Status.all, :id, :name, {:prompt => 'Select status'}, :selected => @task.status_id ) %>
   </div>
 
   <div class="actions">

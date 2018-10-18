@@ -7,7 +7,5 @@ class Task < ApplicationRecord
   belongs_to :priority
   belongs_to :status
 
-  # validates :category, presence: true
-  # validates :priority, presence: true
-  # validates :status, presence: true
+
 end
