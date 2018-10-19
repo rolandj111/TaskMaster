@@ -14,6 +14,8 @@ class CommentsController < ApplicationController
 
   # GET /comments/new
   def new
+    @task = Task.find(params[:task_id])
+    # @task.comments << Comment.new
     @comment = Comment.new
   end
 
@@ -24,11 +26,12 @@ class CommentsController < ApplicationController
   # POST /comments
   # POST /comments.json
   def create
+    @task = Task.find(params[:task_id])
     @comment = Comment.new(comment_params)
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to @comment, notice: 'Comment was successfully created.' }
+        format.html { redirect_to @task, notice: 'Comment was successfully created.' }
         format.json { render :show, status: :created, location: @comment }
       else
         format.html { render :new }
@@ -54,9 +57,10 @@ class CommentsController < ApplicationController
   # DELETE /comments/1
   # DELETE /comments/1.json
   def destroy
+    task = @comment.task
     @comment.destroy
     respond_to do |format|
-      format.html { redirect_to comments_url, notice: 'Comment was successfully destroyed.' }
+      format.html { redirect_to task, notice: 'Comment was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

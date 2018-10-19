@@ -21,7 +21,10 @@
 //= require jquery_ujs
 //= require_tree .
 //= require jquery-ui
+// //= require tasks
 
-$(document).on('turbolinks:load', function() {
+
+/*$(document).on('turbolinks:load', function() {
+    console.log("datepicker new")
     $('.datepicker').datepicker();
-});
+});*/
