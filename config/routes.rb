@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :tasks do
-    resources :comments
+    resources :comments, shallow: true
   end
   resources :projects
   get "dashboard/index"

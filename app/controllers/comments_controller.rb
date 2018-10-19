@@ -14,6 +14,7 @@ class CommentsController < ApplicationController
 
   # GET /comments/new
   def new
+    @task = Task.find_by(:id => params[:task_id])
     @comment = Comment.new
   end
 
@@ -24,12 +25,13 @@ class CommentsController < ApplicationController
   # POST /comments
   # POST /comments.json
   def create
+    @task = Task.find(params[:task_id])
     @comment = Comment.new(comment_params)
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to @comment, notice: 'Comment was successfully created.' }
-        format.json { render :show, status: :created, location: @comment }
+        format.html { redirect_to @task, notice: 'Comment was successfully created.' }
+        format.json { render :show, status: :created, location: @task }
       else
         format.html { render :new }
         format.json { render json: @comment.errors, status: :unprocessable_entity }
