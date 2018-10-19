@@ -10,8 +10,6 @@
       <th>Name</th>
       <th>Description</th>
       <th>Due date</th>
-      <th>Created at</th>
-      <th>Updated at</th>
       <th>Category</th>
       <th>Priority</th>
       <th>Status</th>
@@ -22,16 +20,14 @@
   <tbody>
     <% @tasks.each do |task| %>
       <tr>
-        <td><%= task.project_id %></td>
-        <td><%= task.user_id %></td>
+        <td><%= task.project.try!(:name) %></td>
+        <td><%= task.user.try!(:email) %></td>
         <td><%= task.name %></td>
         <td><%= task.description %></td>
         <td><%= task.due_date %></td>
-        <td><%= task.created_at %></td>
-        <td><%= task.updated_at %></td>
-        <td><%= task.category_id %></td>
-        <td><%= task.priority_id %></td>
-        <td><%= task.status_id %></td>
+        <td><%= task.category.try!(:name) %></td>
+        <td><%= task.priority.try!(:level) %></td>
+        <td><%= task.status.try!(:name) %></td>
         <td><%= link_to 'Show', task %></td>
         <td><%= link_to 'Edit', edit_task_path(task) %></td>
         <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>

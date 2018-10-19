@@ -18,7 +18,11 @@
 
   <div class="field">
     <%= form.label :user_id %>
-    <%= form.collection_select(:user_id, User.all, :id, :email, {:prompt => 'Select user'}, :selected => @task.user_id ) %>
+    <% if current_user.is_admin %>
+      <%= form.collection_select(:user_id, User.all, :id, :email, {:prompt => 'Select user'}, :selected => @task.user_id) %>
+    <% else %>
+      <%= @task.user.try!(:email) %>
+    <% end %>
   </div>
 
   <div class="field">
@@ -40,8 +44,6 @@
     <%= form.label :category_id %>
     <%= form.collection_select(:category_id, Category.all, :id, :name, {:prompt => 'Select category'}, :selected => @task.category_id ) %>
   </div>
-
-
 
   <div class="field">
     <%= form.label :priority_id %>
