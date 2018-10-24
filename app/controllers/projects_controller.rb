@@ -24,6 +24,9 @@ class ProjectsController < SecuredController
   # POST /projects
   # POST /projects.json
   def create
+
+    authorize! :create, Project.new
+
     @project = Project.new(project_params)
 
     respond_to do |format|

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_16_015431) do
+ActiveRecord::Schema.define(version: 2018_10_24_080437) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(version: 2018_10_16_015431) do
   end
 
   create_table "comments", force: :cascade do |t|
-    t.string "task_id"
-    t.string "user_id"
+    t.integer "task_id"
+    t.integer "user_id"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -52,6 +52,11 @@ ActiveRecord::Schema.define(version: 2018_10_16_015431) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "projects_teams", id: false, force: :cascade do |t|
+    t.bigint "project_id", null: false
+    t.bigint "team_id", null: false
+  end
+
   create_table "statuses", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -74,6 +79,23 @@ ActiveRecord::Schema.define(version: 2018_10_16_015431) do
     t.index ["status_id"], name: "index_tasks_on_status_id"
   end
 
+  create_table "team_users", force: :cascade do |t|
+    t.boolean "is_team_lead"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.bigint "team_id"
+    t.index ["team_id"], name: "index_team_users_on_team_id"
+    t.index ["user_id"], name: "index_team_users_on_user_id"
+  end
+
+  create_table "teams", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -94,4 +116,6 @@ ActiveRecord::Schema.define(version: 2018_10_16_015431) do
   add_foreign_key "tasks", "categories"
   add_foreign_key "tasks", "priorities"
   add_foreign_key "tasks", "statuses"
+  add_foreign_key "team_users", "teams"
+  add_foreign_key "team_users", "users"
 end

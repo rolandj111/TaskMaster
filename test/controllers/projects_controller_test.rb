@@ -45,4 +45,10 @@ class ProjectsControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to projects_url
   end
+
+  test "should allow admin to create project" do
+
+    ProjectsController.new.new
+  end
+
 end

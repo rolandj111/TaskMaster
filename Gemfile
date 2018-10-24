@@ -69,3 +69,5 @@ require 'rubygems'
 gem 'autoprefixer-rails'
 require 'autoprefixer-rails'
 
+gem 'cancancan', '~> 2.0'
+

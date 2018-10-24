@@ -23,7 +23,6 @@ default: &default
 
 development:
   <<: *default
-  host: localhost
   database: TaskMaster
   username: pguser
   password: pguser
@@ -61,7 +60,7 @@ development:
 test:
   <<: *default
   #host: localhost
-  database: TaskMaster
+  database: TaskMaster_Test
   username: pguser
   password: pguser
 

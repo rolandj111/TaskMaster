@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+=begin
 Category.delete_all
 Category.create!({id:1, name:'Feature'})
 Category.create!({id:2, name:'Bug'})
@@ -25,6 +25,21 @@ Priority.create!({id:4, level:'Top'})
 #Project.delete_all
 #Project.create!({id:1, name: 'Test project', description: 'description 1'})
 #Task.create!({id: 1, project_id: 1, user_id: 2, name: 'task 1', description: 'description task 1', category_id: 1, due_date: Time.now, priority_id: 1, status_id: 1,})
+=end
 
+=begin
+project1 = Project.create!({id:1, name: 'Project 1', description: 'Project 1 description'})
+project2 = Project.create!({id:2, name: 'Project 2', description: 'Project 2 description'})
 
+team1 = Team.create!({id:1, name: 'Team 1', description: 'Team 1 description'})
+team2 = Team.create!({id:2, name: 'Team 2', description: 'Team 2 description'})
 
+teamUser1 = TeamUser.create!({id: 1, is_team_lead: false, user_id: 1, team_id: 1})
+teamUser2 = TeamUser.create!({id: 2, is_team_lead: true, user_id: 2, team_id: 1})
+=end
+
+#team1 = Team.find_by(:id => 1)
+#project1 = Project.find_by(:id => 1)
+
+#team1.projects << project1
+#team1.save!
