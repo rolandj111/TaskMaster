@@ -23,5 +23,5 @@
 //= require jquery-ui
 
 $(document).on('turbolinks:load', function() {
-    $('.datepicker').datepicker();
+
 });
